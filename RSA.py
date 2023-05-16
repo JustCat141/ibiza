@@ -17,8 +17,8 @@ class RSA:
         self.phi_n = (self.p - 1) * (self.q - 1)
 
         # find an optimal number for e
-        if e is None:
-            self.e = 2
+        if e is None or math.gcd(e,self.phi_n) != 1:
+            self.e = 2 # legkisebb prim
             while self.e < self.phi_n:
                 if (math.gcd(self.e, self.phi_n) == 1):
                     break
