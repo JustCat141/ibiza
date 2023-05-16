@@ -2,8 +2,8 @@ import RSA as rsa
 import DSA as dsa
 
 def rsa_test():
-    r = rsa.RSA(463, 547)
-    m = 20
+    r = rsa.RSA(43, 53, 41)
+    m = 25
 
     enc = r.encrypt(m)
     dec = r.decrypt(enc)
