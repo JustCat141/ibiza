@@ -5,7 +5,7 @@ from Crypto.Math import Primality as prm
 class RSA:
     def __init__(self, prime1, prime2, e = None):
         if not (prm.test_probable_prime(prime1) or prm.test_probable_prime(prime2)):
-            print("A megadott számok nem prímek!")
+            raise Exception("A megadott számok egyike prím!")
             return
 
         # initialize the two primes
